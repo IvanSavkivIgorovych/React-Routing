@@ -13,3 +13,11 @@ a {
   font-size: 20px;
   text-decoration: none;
 }
+
+.blue {
+  color: rgb(25, 205, 200);
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}

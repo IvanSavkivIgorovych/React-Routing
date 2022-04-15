@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import { AboutPage, HomePage, PostsPage, NotFoundPage } from "./pages";
+
 function App() {
   return (
     <header>

@@ -18,6 +18,7 @@ export const PostsPage = () => {
         <li
           key={post.id}
           onClick={() => navigation(`/posts/${post.id}`, { state: post })}
+          style={{ cursor: "pointer" }}
         >
           {post.title}
         </li>

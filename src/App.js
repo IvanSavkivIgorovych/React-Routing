@@ -1,23 +1,19 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import { AboutPage, HomePage, PostsPage, NotFoundPage } from "./pages";
+import { Layout } from "./components/Layout";
+import { AboutPage, HomePage, PostsPage } from "./pages";
 
 function App() {
   return (
     <>
-      <header>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/posts">Posts</a>
-        <a href="/not_found">Not Found</a>
-      </header>
-
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/about" element={<AboutPage />}></Route>
-        <Route path="/posts" element={<PostsPage />}></Route>
-        <Route path="/not_found" element={<NotFoundPage />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="posts" element={<PostsPage />} />
+          <Route path="*" element={<h1>Not found!</h1>} />
+        </Route>
       </Routes>
     </>
   );
